@@ -10,27 +10,16 @@ import UIKit
 
 extension SpringWrapper where Base: UIView {
     
-    func animate(_ animation: Animation.Preset? = .none) {
+    func animate(_ animation: Animation.Preset? = .none,
+                 completion: (() -> Void)? = .none) {
         animation.map { config.animation = $0 }
-        solver.animate()
+        solver.animateTo(completion: completion)
     }
     
-    func animateNext(_ animation: Animation.Preset? = .none,
-                     completion: @escaping () -> ()) {
+    func animateTo(_ animation: Animation.Preset? = .none,
+                   completion: (() -> Void)? = .none) {
         animation.map { config.animation = $0 }
-        solver.animateNext(completion: completion)
-    }
-    
-    func animateTo(_ animation: Animation.Preset? = .none) {
-        animation.map { config.animation = $0 }
-        solver.animateTo()
-    }
-    
-    func animateToNext(_ animation: Animation.Preset? = .none,
-                       completion: @escaping () -> ()) {
-        
-        animation.map { config.animation = $0 }
-        solver.animateToNext(completion: completion)
+        solver.animateTo(completion: completion)
     }
     
     func customAwakeFromNib() {

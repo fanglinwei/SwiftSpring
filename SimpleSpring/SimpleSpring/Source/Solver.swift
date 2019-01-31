@@ -31,32 +31,16 @@ public class Solver : NSObject {
 // MARK: - Public
 extension Solver {
     
-    public func animate() {
+    public func animate(completion: (() -> Void)? = .none) {
         set(animateFrom: true)
         animatePreset()
-        setView {}
+        setView(completion: completion)
     }
     
-    public func animateNext(completion: @escaping () -> ()) {
-        set(animateFrom: true)
-        animatePreset()
-        setView {
-            completion()
-        }
-    }
-    
-    public func animateTo() {
+    public func animateTo(completion: (() -> Void)? = .none ) {
         set(animateFrom: false)
         animatePreset()
-        setView {}
-    }
-    
-    public func animateToNext(completion: @escaping () -> ()) {
-        set(animateFrom: false)
-        animatePreset()
-        setView {
-            completion()
-        }
+        setView(completion: completion)
     }
     
     public func customAwakeFromNib() {
@@ -333,7 +317,7 @@ extension Solver {
         }
     }
     
-    private func setView(completion: @escaping () -> ()) {
+    private func setView(completion: (() -> Void)? = .none) {
         func transformAnimate() {
             let translate = CGAffineTransform(translationX: x, y: y)
             let scale = CGAffineTransform(scaleX: scaleX, y: scaleY)
@@ -367,7 +351,7 @@ extension Solver {
             animations: animations
         ) { [weak self] finished in
             
-            completion()
+            completion?()
             self?.resetAll()
         }
     }
