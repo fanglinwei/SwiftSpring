@@ -22,10 +22,6 @@ public class Solver : NSObject {
         super.init()
         setupNotification()
     }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
-    }
 }
 
 // MARK: - Public
@@ -44,9 +40,7 @@ extension Solver {
     }
     
     public func customAwakeFromNib() {
-        guard autohide else {
-            return
-        }
+        guard autohide else { return }
         alpha = 0
     }
     
@@ -68,7 +62,12 @@ extension Solver {
 extension Solver {
     
     private func setupNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActiveNotification), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didBecomeActiveNotification),
+            name: UIApplication.didBecomeActiveNotification,
+            object: nil
+        )
     }
     
     @objc private  func didBecomeActiveNotification(_ notification: NSNotification) {
@@ -103,8 +102,8 @@ extension Solver {
     private var curve: Animation.Curve { return config.curve }
     
     // UIView
-    private var layer : CALayer { return view.layer }
-    private var transform : CGAffineTransform {
+    private var layer: CALayer { return view.layer }
+    private var transform: CGAffineTransform {
         get { return view.transform }
         set { view.transform = newValue }
     }
@@ -201,6 +200,19 @@ extension Solver {
             animation.repeatCount = repeatCount
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
             layer.add(animation, forKey: "pop")
+        case .active:
+            let animation = CABasicAnimation(keyPath: "transform.scale")
+            animation.fromValue = -0.023*force
+            animation.toValue = 0.023*force
+            animation.timingFunction = getTimingFunction(curve: curve)
+            animation.duration = CFTimeInterval(duration)
+            animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
+            animation.autoreverses = true
+            animation.fillMode = .forwards
+            animation.isAdditive = true
+            animation.repeatCount = repeatCount
+            layer.add(animation, forKey: "active")
+            
         case .flipX:
             config.rotate = 0
             config.scaleX = 1
@@ -328,18 +340,18 @@ extension Solver {
             alpha = opacity
         }
         
-        if animateFrom {
-            transformAnimate()
-        }
-        
         let animations =  { [weak self] in
             guard let self = self else { return }
             if self.animateFrom {
-                self.transform = CGAffineTransform.identity
+                self.transform = .identity
                 self.alpha = 1
             } else {
                 transformAnimate()
             }
+        }
+        
+        if animateFrom {
+            transformAnimate()
         }
         
         UIView.animate(
@@ -347,10 +359,9 @@ extension Solver {
             delay: TimeInterval(delay),
             usingSpringWithDamping: damping,
             initialSpringVelocity: velocity,
-            options: [getAnimationOptions(curve: curve), UIView.AnimationOptions.allowUserInteraction],
+            options: [getAnimationOptions(curve: curve), .allowUserInteraction],
             animations: animations
         ) { [weak self] finished in
-            
             completion?()
             self?.resetAll()
         }
@@ -358,10 +369,10 @@ extension Solver {
     
     private func getAnimationOptions(curve: Animation.Curve) -> UIView.AnimationOptions {
         switch curve {
-        case .easeIn: return UIView.AnimationOptions.curveEaseIn
-        case .easeOut: return UIView.AnimationOptions.curveEaseOut
-        case .easeInOut: return UIView.AnimationOptions()
-        default:     return UIView.AnimationOptions.curveLinear
+        case .easeIn:       return UIView.AnimationOptions.curveEaseIn
+        case .easeOut:      return UIView.AnimationOptions.curveEaseOut
+        case .easeInOut:    return UIView.AnimationOptions()
+        default:            return UIView.AnimationOptions.curveLinear
         }
     }
     
@@ -396,7 +407,7 @@ extension Solver {
         case .easeInBack: return CAMediaTimingFunction(controlPoints: 0.6, -0.28, 0.735, 0.045)
         case .easeOutBack: return CAMediaTimingFunction(controlPoints: 0.175, 0.885, 0.32, 1.275)
         case .easeInOutBack: return CAMediaTimingFunction(controlPoints: 0.68, -0.55, 0.265, 1.55)
-        default:            return CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
+        default: return CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
         }
     }
 }
@@ -428,4 +439,3 @@ extension Solver {
         config.duration = 0.7
     }
 }
-

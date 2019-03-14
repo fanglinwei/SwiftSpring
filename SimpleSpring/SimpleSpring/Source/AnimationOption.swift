@@ -9,6 +9,7 @@
 import Foundation
 
 enum Animation {
+    
     enum Preset: String {
         case slideLeft
         case slideRight
@@ -30,6 +31,7 @@ enum Animation {
         case fall
         case shake
         case pop
+        case active
         case flipX
         case flipY
         case morph
