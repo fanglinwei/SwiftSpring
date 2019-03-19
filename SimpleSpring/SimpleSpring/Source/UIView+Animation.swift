@@ -13,7 +13,7 @@ extension SpringWrapper where Base: UIView {
     func animate(_ animation: Animation.Preset? = .none,
                  completion: (() -> Void)? = .none) {
         animation.map { config.animation = $0 }
-        solver.animateTo(completion: completion)
+        solver.animate(completion: completion)
     }
     
     func animateTo(_ animation: Animation.Preset? = .none,
