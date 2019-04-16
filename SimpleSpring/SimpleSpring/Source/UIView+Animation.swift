@@ -1,17 +1,110 @@
 //
 //  UIView+Animation.swift
-//  Spring
 //
 //  Created by calm on 2019/1/25.
 //  Copyright © 2019 calm. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-extension SpringWrapper where Base: UIView {
+// MARK: - 链式属性
+public extension Wrapper where Base: UIView {
+    
+    @discardableResult
+    func autostart(_ autostart: Bool) -> Wrapper {
+        config.autostart = autostart
+        return self
+    }
+    @discardableResult
+    func autohide(_ autohide: Bool) -> Wrapper {
+        config.autohide = autohide
+        return self
+    }
+    @discardableResult
+    func force(_ force: CGFloat) -> Wrapper {
+        config.force = force
+        return self
+    }
+    @discardableResult
+    func delay(_ delay: CGFloat) -> Wrapper {
+        config.delay = delay
+        return self
+    }
+    @discardableResult
+    func duration(_ duration: CGFloat) -> Wrapper {
+        config.duration = duration
+        return self
+    }
+    @discardableResult
+    func damping(_ damping: CGFloat) -> Wrapper {
+        config.damping = damping
+        return self
+    }
+    @discardableResult
+    func velocity(_ velocity: CGFloat) -> Wrapper {
+        config.velocity = velocity
+        return self
+    }
+    @discardableResult
+    func repeatCount(_ repeatCount: Float) -> Wrapper {
+        config.repeatCount = repeatCount
+        return self
+    }
+    @discardableResult
+    func potint(_ x: CGFloat, _ y: CGFloat) -> Wrapper {
+        config.x = x
+        config.y = y
+        return self
+    }
+    @discardableResult
+    func scale(_ x: CGFloat, _ y: CGFloat) -> Wrapper {
+        config.scaleX = x
+        config.scaleY = y
+        return self
+    }
+    @discardableResult
+    func rotate(_ rotate: CGFloat) -> Wrapper {
+        config.rotate = rotate
+        return self
+    }
+    @discardableResult
+    func opacity(_ opacity: CGFloat) -> Wrapper {
+        config.opacity = opacity
+        return self
+    }
+    @discardableResult
+    func animateFrom(_ animateFrom: Bool) -> Wrapper {
+        config.animateFrom = animateFrom
+        return self
+    }
+    @discardableResult
+    func curve(_ curve: Animation.Curve) -> Wrapper {
+        config.curve = curve
+        return self
+    }
+    @discardableResult
+    func animation(_ animation: Animation.Preset) -> Wrapper {
+        config.animation = animation
+        return self
+    }
+    // UIView
+    @discardableResult
+    func transform(_ transform: CGAffineTransform) -> Wrapper {
+        base.transform = transform
+        return self
+    }
+    @discardableResult
+    func alpha(_ alpha: CGFloat) -> Wrapper {
+        base.alpha = alpha
+        return self
+    }
+}
+
+public extension Wrapper where Base: UIView {
     
     func animate(_ animation: Animation.Preset? = .none,
-                 completion: (() -> Void)? = .none) {
+                        completion: (() -> Void)? = .none) {
         animation.map { config.animation = $0 }
         solver.animate(completion: completion)
     }
@@ -32,30 +125,29 @@ extension SpringWrapper where Base: UIView {
 }
 
 private var taskConfigKey: Void?
-private var taskSpringKey: Void?
+private var taskSolverKey: Void?
 
-extension SpringWrapper where Base: UIView {
+extension Wrapper where Base: UIView {
     
-    mutating func set(config: (Config)->() ) {
+    public func set(config: (Config) -> Void) {
         config(self.config)
     }
     
-    var config : Config {
-        guard let config: Config = getAssociatedObject(base, &taskConfigKey) else {
+    private var config: Config {
+        guard let config = objc_getAssociatedObject(base, &taskConfigKey) as? Config else {
             let value = Config()
-            setRetainedAssociatedObject(base, &taskConfigKey, value)
+            objc_setAssociatedObject(base, &taskConfigKey, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             return value
         }
         return config
     }
     
     private var solver: Solver {
-        guard let solver: Solver = getAssociatedObject(base, &taskSpringKey) else {
-            let value = Solver(config, build)
-            setRetainedAssociatedObject(base, &taskSpringKey, value)
+        guard let solver = objc_getAssociatedObject(base, &taskSolverKey) as? Solver else {
+            let value = Solver(config, base)
+            objc_setAssociatedObject(base, &taskSolverKey, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             return value
         }
         return solver
     }
 }
-

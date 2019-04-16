@@ -12,14 +12,11 @@
 		284C062121FFFCF7003E7D82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C061F21FFFCF7003E7D82 /* Main.storyboard */; };
 		284C062321FFFCF8003E7D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284C062221FFFCF8003E7D82 /* Assets.xcassets */; };
 		284C062621FFFCF8003E7D82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C062421FFFCF8003E7D82 /* LaunchScreen.storyboard */; };
-		284C063621FFFD16003E7D82 /* AnimationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C062E21FFFD16003E7D82 /* AnimationOption.swift */; };
-		284C063721FFFD16003E7D82 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C062F21FFFD16003E7D82 /* Solver.swift */; };
-		284C063821FFFD16003E7D82 /* SpringWrapper+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C063021FFFD16003E7D82 /* SpringWrapper+Chain.swift */; };
-		284C063921FFFD16003E7D82 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C063121FFFD16003E7D82 /* Runtime.swift */; };
-		284C063A21FFFD16003E7D82 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C063221FFFD16003E7D82 /* Config.swift */; };
-		284C063B21FFFD16003E7D82 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C063321FFFD16003E7D82 /* SpringAnimation.swift */; };
-		284C063C21FFFD16003E7D82 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C063421FFFD16003E7D82 /* UIView+Animation.swift */; };
-		284C063D21FFFD16003E7D82 /* SpringWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C063521FFFD16003E7D82 /* SpringWrapper.swift */; };
+		28C2A704226584160087A982 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C2A6FF226584160087A982 /* Animation.swift */; };
+		28C2A705226584160087A982 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C2A700226584160087A982 /* Config.swift */; };
+		28C2A706226584160087A982 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C2A701226584160087A982 /* UIView+Animation.swift */; };
+		28C2A707226584160087A982 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C2A702226584160087A982 /* Wrapper.swift */; };
+		28C2A708226584160087A982 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C2A703226584160087A982 /* Solver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +27,11 @@
 		284C062221FFFCF8003E7D82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		284C062521FFFCF8003E7D82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		284C062721FFFCF8003E7D82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		284C062E21FFFD16003E7D82 /* AnimationOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationOption.swift; sourceTree = "<group>"; };
-		284C062F21FFFD16003E7D82 /* Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
-		284C063021FFFD16003E7D82 /* SpringWrapper+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpringWrapper+Chain.swift"; sourceTree = "<group>"; };
-		284C063121FFFD16003E7D82 /* Runtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
-		284C063221FFFD16003E7D82 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		284C063321FFFD16003E7D82 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
-		284C063421FFFD16003E7D82 /* UIView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
-		284C063521FFFD16003E7D82 /* SpringWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringWrapper.swift; sourceTree = "<group>"; };
+		28C2A6FF226584160087A982 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		28C2A700226584160087A982 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		28C2A701226584160087A982 /* UIView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
+		28C2A702226584160087A982 /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
+		28C2A703226584160087A982 /* Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,14 +78,11 @@
 		284C062D21FFFD16003E7D82 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				284C062E21FFFD16003E7D82 /* AnimationOption.swift */,
-				284C062F21FFFD16003E7D82 /* Solver.swift */,
-				284C063021FFFD16003E7D82 /* SpringWrapper+Chain.swift */,
-				284C063121FFFD16003E7D82 /* Runtime.swift */,
-				284C063221FFFD16003E7D82 /* Config.swift */,
-				284C063321FFFD16003E7D82 /* SpringAnimation.swift */,
-				284C063421FFFD16003E7D82 /* UIView+Animation.swift */,
-				284C063521FFFD16003E7D82 /* SpringWrapper.swift */,
+				28C2A6FF226584160087A982 /* Animation.swift */,
+				28C2A700226584160087A982 /* Config.swift */,
+				28C2A703226584160087A982 /* Solver.swift */,
+				28C2A701226584160087A982 /* UIView+Animation.swift */,
+				28C2A702226584160087A982 /* Wrapper.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -167,16 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				284C063621FFFD16003E7D82 /* AnimationOption.swift in Sources */,
 				284C061E21FFFCF7003E7D82 /* ViewController.swift in Sources */,
-				284C063C21FFFD16003E7D82 /* UIView+Animation.swift in Sources */,
-				284C063721FFFD16003E7D82 /* Solver.swift in Sources */,
-				284C063B21FFFD16003E7D82 /* SpringAnimation.swift in Sources */,
-				284C063A21FFFD16003E7D82 /* Config.swift in Sources */,
+				28C2A705226584160087A982 /* Config.swift in Sources */,
+				28C2A706226584160087A982 /* UIView+Animation.swift in Sources */,
+				28C2A704226584160087A982 /* Animation.swift in Sources */,
 				284C061C21FFFCF7003E7D82 /* AppDelegate.swift in Sources */,
-				284C063921FFFD16003E7D82 /* Runtime.swift in Sources */,
-				284C063D21FFFD16003E7D82 /* SpringWrapper.swift in Sources */,
-				284C063821FFFD16003E7D82 /* SpringWrapper+Chain.swift in Sources */,
+				28C2A708226584160087A982 /* Solver.swift in Sources */,
+				28C2A707226584160087A982 /* Wrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

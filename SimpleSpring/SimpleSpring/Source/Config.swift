@@ -1,15 +1,14 @@
 //
-//  Config.swift
-//  Spring
+//  Config.swif
 //
 //  Created by calm on 2019/1/25.
 //  Copyright © 2019 calm. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class Config: NSObject {
-    
+public class Config {
     public var autostart: Bool = false
     public var autohide: Bool = false
     public var animation: Animation.Preset = .none
@@ -28,5 +27,3 @@ class Config: NSObject {
     public var opacity: CGFloat = 1
     public var animateFrom: Bool = false
 }
-
-
