@@ -12,16 +12,6 @@ import UIKit
 public extension Wrapper where Base: UIView {
     
     @discardableResult
-    func autostart(_ autostart: Bool) -> Wrapper {
-        config.autostart = autostart
-        return self
-    }
-    @discardableResult
-    func autohide(_ autohide: Bool) -> Wrapper {
-        config.autohide = autohide
-        return self
-    }
-    @discardableResult
     func force(_ force: CGFloat) -> Wrapper {
         config.force = force
         return self
@@ -104,27 +94,12 @@ public extension Wrapper where Base: UIView {
 public extension Wrapper where Base: UIView {
     
     func animate(_ animation: Animation.Preset? = .none,
-                        completion: (() -> Void)? = .none) {
+                 completion: (() -> Void)? = .none) {
         animation.map { config.animation = $0 }
         solver.animate(completion: completion)
     }
-    
-    func animateTo(_ animation: Animation.Preset? = .none,
-                   completion: (() -> Void)? = .none) {
-        animation.map { config.animation = $0 }
-        solver.animateTo(completion: completion)
-    }
-    
-    func customAwakeFromNib() {
-        solver.customLayoutSubviews()
-    }
-    
-    func customLayoutSubviews() {
-        solver.customLayoutSubviews()
-    }
 }
 
-private var taskConfigKey: Void?
 private var taskSolverKey: Void?
 
 extension Wrapper where Base: UIView {
@@ -134,17 +109,12 @@ extension Wrapper where Base: UIView {
     }
     
     private var config: Config {
-        guard let config = objc_getAssociatedObject(base, &taskConfigKey) as? Config else {
-            let value = Config()
-            objc_setAssociatedObject(base, &taskConfigKey, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            return value
-        }
-        return config
+        return solver.config
     }
     
     private var solver: Solver {
         guard let solver = objc_getAssociatedObject(base, &taskSolverKey) as? Solver else {
-            let value = Solver(config, base)
+            let value = Solver(Config(), base)
             objc_setAssociatedObject(base, &taskSolverKey, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             return value
         }

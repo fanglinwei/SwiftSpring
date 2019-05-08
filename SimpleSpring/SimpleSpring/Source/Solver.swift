@@ -10,79 +10,26 @@ import UIKit
 
 class Solver: NSObject {
     
-    private let config: Config
-    private let view: UIView
-    
-    private var shouldAnimateAfterActive = false
-    private var shouldAnimateInLayoutSubviews = true
+    let config: Config
+    let view: UIView
     
     init(_ config: Config, _ view: UIView) {
         self.config = config
         self.view = view
         super.init()
-        setupNotification()
     }
 }
 
 extension Solver {
     
     func animate(completion: (() -> Void)? = .none) {
-        set(animateFrom: true)
         animatePreset()
         set(view: completion)
-    }
-    
-    func animateTo(completion: (() -> Void)? = .none) {
-        set(animateFrom: false)
-        animatePreset()
-        set(view: completion)
-    }
-    
-    func customAwakeFromNib() {
-        guard autohide else { return }
-        alpha = 0
-    }
-    
-    func customLayoutSubviews() {
-        guard shouldAnimateInLayoutSubviews else { return }
-        shouldAnimateInLayoutSubviews = false
-        
-        guard autostart, UIApplication.shared.applicationState == .active else {
-            shouldAnimateAfterActive = true
-            return
-        }
-        alpha = 0
-        animate()
-    }
-}
-
-// MARK: - Notification
-extension Solver {
-    
-    private func setupNotification() {
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(didBecomeActive),
-            name: UIApplication.didBecomeActiveNotification,
-            object: nil
-        )
-    }
-    
-    @objc private func didBecomeActive(_ sender: NSNotification) {
-        guard shouldAnimateAfterActive else {
-            return
-        }
-        
-        view.alpha = 0
-        animate()
-        shouldAnimateAfterActive = false
     }
 }
 
 extension Solver {
     
-    private var autostart: Bool { return config.autostart }
-    private var autohide: Bool { return config.autohide }
     private var animation: Animation.Preset { return config.animation}
     private var force: CGFloat { return config.force }
     private var delay: CGFloat { return config.delay }
@@ -148,8 +95,8 @@ extension Solver {
             config.opacity = 0
             
         case .fadeOut:
-            set(animateFrom: false)
             config.opacity = 0
+            config.animateFrom = false
             
         case .fadeOutIn:
             let animation = CABasicAnimation()
@@ -167,16 +114,16 @@ extension Solver {
             config.x = 300 * force
             
         case .fadeInRight:
-            config.x = -300 * force
             config.opacity = 0
+            config.x = -300 * force
             
         case .fadeInDown:
-            config.y = -300 * force
             config.opacity = 0
+            config.y = -300 * force
             
         case .fadeInUp:
-            config.y = 300 * force
             config.opacity = 0
+            config.y = 300 * force
             
         case .zoomIn:
             config.opacity = 0
@@ -184,15 +131,15 @@ extension Solver {
             config.scaleY = 2 * force
             
         case .zoomOut:
-            set(animateFrom: false)
             config.opacity = 0
             config.scaleX = 2 * force
             config.scaleY = 2 * force
+            config.animateFrom = false
             
         case .fall:
-            set(animateFrom: false)
             config.rotate = 15 * (.pi / 180.0)
             config.y = 600 * force
+            config.animateFrom = false
             
         case .shake:
             let animation = CAKeyframeAnimation()
@@ -400,10 +347,6 @@ extension Solver {
 
 extension Solver {
     
-    func set(animateFrom value: Bool) {
-        config.animateFrom = value
-    }
-    
     private func reset() {
         config.x = 0
         config.y = 0
@@ -411,17 +354,20 @@ extension Solver {
     }
     
     private func resetAll() {
-        config.x = 0
-        config.y = 0
-        config.animation = .none
-        config.opacity = 1
-        config.scaleX = 1
-        config.scaleY = 1
-        config.rotate = 0
+        config.force = 1
+        config.delay = 0
+        config.duration = 0.7
         config.damping = 0.7
         config.velocity = 0.7
         config.repeatCount = 1
-        config.delay = 0
-        config.duration = 0.7
+        config.x = 0
+        config.y = 0
+        config.scaleX = 1
+        config.scaleY = 1
+        config.rotate = 0
+        config.animation = .none
+        config.curve = .none
+        config.opacity = 1
+        config.animateFrom = true
     }
 }

@@ -26,7 +26,6 @@ public extension Animation {
         case fadeIn, fadeOut, fadeOutIn
         case zoomIn, zoomOut
         case flipX, flipY
-        
         case fall
         case shake
         case pop
@@ -42,9 +41,8 @@ public extension Animation {
     enum Curve {
         case linear
         case discrete
-        case spring(damping: CGFloat)
         case easeIn, easeOut, easeInOut
-  
+        
         // http://easings.net/
         case easeInSine, easeOutSine, easeInOutSine
         case easeInQuad, easeOutQuad, easeInOutQuad
@@ -55,6 +53,7 @@ public extension Animation {
         case easeInCirc, easeOutCirc, easeInOutCirc
         case easeInBack, easeOutBack, easeInOutBack
         
+        case spring(damping: CGFloat)
         case custom(c1x: Float, c1y: Float, c2x: Float, c2y: Float)
         
         case none
@@ -67,15 +66,13 @@ public extension Animation {
             default:            return .curveLinear
             }
         }
-      
+        
         internal var timingFunction: CAMediaTimingFunction {
             switch self {
             case .easeIn:          return .init(name: .easeIn)
             case .easeOut:         return .init(name: .easeOut)
             case .easeInOut:       return .init(name: .easeInEaseOut)
             case .linear:          return .init(name: .linear)
-            case .spring(let damping):
-                return .init(controlPoints: 0.5, 1.1 + Float(damping / 3), 1, 1)
             case .discrete:        return .init(controlPoints: 1, 0, 1, 1)
                 
             // http://easings.net/
@@ -104,9 +101,14 @@ public extension Animation {
             case .easeOutBack:     return .init(controlPoints: 0.175, 0.885, 0.32, 1.275)
             case .easeInOutBack:   return .init(controlPoints: 0.68, -0.55, 0.265, 1.55)
                 
-            case .custom(let c1x, let c1y, let c2x, let c2y):
+            case let .spring(damping):
+                return .init(controlPoints: 0.5, 1.1 + Float(damping / 3.0), 1, 1)
+                
+            case let .custom(c1x, c1y, c2x, c2y):
                 return .init(controlPoints: c1x, c1y, c2x, c2y)
-            default: return .init(name: .default)
+                
+            default:
+                return .init(name: .default)
             }
         }
     }

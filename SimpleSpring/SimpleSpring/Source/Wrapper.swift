@@ -27,3 +27,4 @@ public extension AnimationCompatible {
 }
 
 extension UIView: AnimationCompatible {}
+

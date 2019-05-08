@@ -9,9 +9,8 @@ import Foundation
 import UIKit
 
 public class Config {
-    public var autostart: Bool = false
-    public var autohide: Bool = false
     public var animation: Animation.Preset = .none
+    public var curve: Animation.Curve = .none
     public var force: CGFloat = 1
     public var delay: CGFloat = 0
     public var duration: CGFloat = 0.7
@@ -23,7 +22,6 @@ public class Config {
     public var scaleX: CGFloat = 1
     public var scaleY: CGFloat = 1
     public var rotate: CGFloat = 0
-    public var curve: Animation.Curve = .none
     public var opacity: CGFloat = 1
-    public var animateFrom: Bool = false
+    public var animateFrom: Bool = true
 }
