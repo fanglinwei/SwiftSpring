@@ -1,5 +1,5 @@
 PODS:
-  - SwiftSpring (0.0.6)
+  - SwiftSpring (0.0.5)
 
 DEPENDENCIES:
   - SwiftSpring (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftSpring: 2a04725be71d4ad954590161a8f6ae533c97e889
+  SwiftSpring: a5afe7c56dd165bdc51ed7228dd8873d5dafe128
 
 PODFILE CHECKSUM: 7621bce71285518037d3033f0dbcf0a5fdcc4ce0
 
