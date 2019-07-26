@@ -1,0 +1,16 @@
+PODS:
+  - SpringAnimation (0.0.5)
+
+DEPENDENCIES:
+  - SpringAnimation (from `../`)
+
+EXTERNAL SOURCES:
+  SpringAnimation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SpringAnimation: 8d89f941176de6ad07982a77ca59bc2aa3fc3a43
+
+PODFILE CHECKSUM: 1663735ef12f386c8c962e182208bdbaf74541b6
+
+COCOAPODS: 1.7.5

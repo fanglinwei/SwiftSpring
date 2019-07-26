@@ -1,7 +1,8 @@
 //
 //  Animation.swift
+//  SpringAnimation
 //
-//  Created by calm on 2019/1/25.
+//  Created by calm on 2019/7/26.
 //  Copyright © 2019 calm. All rights reserved.
 //
 
@@ -26,6 +27,7 @@ public extension Animation {
         case fadeIn, fadeOut, fadeOutIn
         case zoomIn, zoomOut
         case flipX, flipY
+        
         case fall
         case shake
         case pop
