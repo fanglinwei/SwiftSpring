@@ -18,7 +18,7 @@
 **CocoaPods - Podfile**
 
 ```ruby
-pod 'SpringAnimation'
+pod 'SwiftSpring'
 ```
 
 ## 使用
@@ -26,7 +26,7 @@ pod 'SpringAnimation'
 首先导入:
 
 ```swift
-import SpringAnimation
+import SwiftSpring
 ```
 
 下面是一些简单示例. 支持所有设备和模拟器:

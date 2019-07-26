@@ -1,16 +1,16 @@
 PODS:
-  - SpringAnimation (0.0.5)
+  - SwiftSpring (0.0.6)
 
 DEPENDENCIES:
-  - SpringAnimation (from `../`)
+  - SwiftSpring (from `../`)
 
 EXTERNAL SOURCES:
-  SpringAnimation:
+  SwiftSpring:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SpringAnimation: 8d89f941176de6ad07982a77ca59bc2aa3fc3a43
+  SwiftSpring: 2a04725be71d4ad954590161a8f6ae533c97e889
 
-PODFILE CHECKSUM: 1663735ef12f386c8c962e182208bdbaf74541b6
+PODFILE CHECKSUM: 7621bce71285518037d3033f0dbcf0a5fdcc4ce0
 
 COCOAPODS: 1.7.5

@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2881E74822EAAD1C00842C7A /* SpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2881E74622EAAD1C00842C7A /* SpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2881E75322EAAD8200842C7A /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881E74E22EAAD8200842C7A /* Solver.swift */; };
-		2881E75422EAAD8200842C7A /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881E74F22EAAD8200842C7A /* Wrapper.swift */; };
-		2881E75522EAAD8200842C7A /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881E75022EAAD8200842C7A /* UIView+Animation.swift */; };
-		2881E75622EAAD8200842C7A /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881E75122EAAD8200842C7A /* Animation.swift */; };
-		2881E75722EAAD8200842C7A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881E75222EAAD8200842C7A /* Config.swift */; };
+		2881E76722EAB57800842C7A /* SwiftSpring.h in Headers */ = {isa = PBXBuildFile; fileRef = 2881E76522EAB57800842C7A /* SwiftSpring.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2881E77C22EAB6DA00842C7A /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881E77722EAB6DA00842C7A /* UIView+Animation.swift */; };
+		2881E77D22EAB6DA00842C7A /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881E77822EAB6DA00842C7A /* Solver.swift */; };
+		2881E77E22EAB6DA00842C7A /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881E77922EAB6DA00842C7A /* Animation.swift */; };
+		2881E77F22EAB6DA00842C7A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881E77A22EAB6DA00842C7A /* Config.swift */; };
+		2881E78022EAB6DA00842C7A /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881E77B22EAB6DA00842C7A /* Wrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2881E74322EAAD1C00842C7A /* SpringAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpringAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2881E74622EAAD1C00842C7A /* SpringAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpringAnimation.h; sourceTree = "<group>"; };
-		2881E74722EAAD1C00842C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2881E74E22EAAD8200842C7A /* Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
-		2881E74F22EAAD8200842C7A /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
-		2881E75022EAAD8200842C7A /* UIView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
-		2881E75122EAAD8200842C7A /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
-		2881E75222EAAD8200842C7A /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2881E76222EAB57800842C7A /* SwiftSpring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSpring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2881E76522EAB57800842C7A /* SwiftSpring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSpring.h; sourceTree = "<group>"; };
+		2881E76622EAB57800842C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2881E77722EAB6DA00842C7A /* UIView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
+		2881E77822EAB6DA00842C7A /* Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
+		2881E77922EAB6DA00842C7A /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		2881E77A22EAB6DA00842C7A /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2881E77B22EAB6DA00842C7A /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2881E74022EAAD1C00842C7A /* Frameworks */ = {
+		2881E75F22EAB57800842C7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,32 +37,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2881E73922EAAD1C00842C7A = {
+		2881E75822EAB57800842C7A = {
 			isa = PBXGroup;
 			children = (
-				2881E74522EAAD1C00842C7A /* Sources */,
-				2881E74422EAAD1C00842C7A /* Products */,
+				2881E76422EAB57800842C7A /* Sources */,
+				2881E76322EAB57800842C7A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2881E74422EAAD1C00842C7A /* Products */ = {
+		2881E76322EAB57800842C7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2881E74322EAAD1C00842C7A /* SpringAnimation.framework */,
+				2881E76222EAB57800842C7A /* SwiftSpring.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2881E74522EAAD1C00842C7A /* Sources */ = {
+		2881E76422EAB57800842C7A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				2881E75122EAAD8200842C7A /* Animation.swift */,
-				2881E75222EAAD8200842C7A /* Config.swift */,
-				2881E74E22EAAD8200842C7A /* Solver.swift */,
-				2881E75022EAAD8200842C7A /* UIView+Animation.swift */,
-				2881E74F22EAAD8200842C7A /* Wrapper.swift */,
-				2881E74622EAAD1C00842C7A /* SpringAnimation.h */,
-				2881E74722EAAD1C00842C7A /* Info.plist */,
+				2881E77922EAB6DA00842C7A /* Animation.swift */,
+				2881E77A22EAB6DA00842C7A /* Config.swift */,
+				2881E77822EAB6DA00842C7A /* Solver.swift */,
+				2881E77722EAB6DA00842C7A /* UIView+Animation.swift */,
+				2881E77B22EAB6DA00842C7A /* Wrapper.swift */,
+				2881E76522EAB57800842C7A /* SwiftSpring.h */,
+				2881E76622EAB57800842C7A /* Info.plist */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -70,69 +70,69 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2881E73E22EAAD1C00842C7A /* Headers */ = {
+		2881E75D22EAB57800842C7A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2881E74822EAAD1C00842C7A /* SpringAnimation.h in Headers */,
+				2881E76722EAB57800842C7A /* SwiftSpring.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2881E74222EAAD1C00842C7A /* SpringAnimation */ = {
+		2881E76122EAB57800842C7A /* SwiftSpring */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2881E74B22EAAD1C00842C7A /* Build configuration list for PBXNativeTarget "SpringAnimation" */;
+			buildConfigurationList = 2881E76A22EAB57800842C7A /* Build configuration list for PBXNativeTarget "SwiftSpring" */;
 			buildPhases = (
-				2881E73E22EAAD1C00842C7A /* Headers */,
-				2881E73F22EAAD1C00842C7A /* Sources */,
-				2881E74022EAAD1C00842C7A /* Frameworks */,
-				2881E74122EAAD1C00842C7A /* Resources */,
+				2881E75D22EAB57800842C7A /* Headers */,
+				2881E75E22EAB57800842C7A /* Sources */,
+				2881E75F22EAB57800842C7A /* Frameworks */,
+				2881E76022EAB57800842C7A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SpringAnimation;
-			productName = SpringAnimation;
-			productReference = 2881E74322EAAD1C00842C7A /* SpringAnimation.framework */;
+			name = SwiftSpring;
+			productName = SwiftSpring;
+			productReference = 2881E76222EAB57800842C7A /* SwiftSpring.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2881E73A22EAAD1C00842C7A /* Project object */ = {
+		2881E75922EAB57800842C7A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = calm;
 				TargetAttributes = {
-					2881E74222EAAD1C00842C7A = {
+					2881E76122EAB57800842C7A = {
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1030;
 					};
 				};
 			};
-			buildConfigurationList = 2881E73D22EAAD1C00842C7A /* Build configuration list for PBXProject "SpringAnimation" */;
+			buildConfigurationList = 2881E75C22EAB57800842C7A /* Build configuration list for PBXProject "SwiftSpring" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2881E73922EAAD1C00842C7A;
-			productRefGroup = 2881E74422EAAD1C00842C7A /* Products */;
+			mainGroup = 2881E75822EAB57800842C7A;
+			productRefGroup = 2881E76322EAB57800842C7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2881E74222EAAD1C00842C7A /* SpringAnimation */,
+				2881E76122EAB57800842C7A /* SwiftSpring */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2881E74122EAAD1C00842C7A /* Resources */ = {
+		2881E76022EAB57800842C7A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -142,22 +142,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2881E73F22EAAD1C00842C7A /* Sources */ = {
+		2881E75E22EAB57800842C7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2881E75322EAAD8200842C7A /* Solver.swift in Sources */,
-				2881E75422EAAD8200842C7A /* Wrapper.swift in Sources */,
-				2881E75722EAAD8200842C7A /* Config.swift in Sources */,
-				2881E75622EAAD8200842C7A /* Animation.swift in Sources */,
-				2881E75522EAAD8200842C7A /* UIView+Animation.swift in Sources */,
+				2881E77D22EAB6DA00842C7A /* Solver.swift in Sources */,
+				2881E78022EAB6DA00842C7A /* Wrapper.swift in Sources */,
+				2881E77F22EAB6DA00842C7A /* Config.swift in Sources */,
+				2881E77E22EAB6DA00842C7A /* Animation.swift in Sources */,
+				2881E77C22EAB6DA00842C7A /* UIView+Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		2881E74922EAAD1C00842C7A /* Debug */ = {
+		2881E76822EAB57800842C7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -221,7 +221,7 @@
 			};
 			name = Debug;
 		};
-		2881E74A22EAAD1C00842C7A /* Release */ = {
+		2881E76922EAB57800842C7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -279,7 +279,7 @@
 			};
 			name = Release;
 		};
-		2881E74C22EAAD1C00842C7A /* Debug */ = {
+		2881E76B22EAB57800842C7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -297,7 +297,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = calm.SpringAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = calm.SwiftSpring;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -306,7 +306,7 @@
 			};
 			name = Debug;
 		};
-		2881E74D22EAAD1C00842C7A /* Release */ = {
+		2881E76C22EAB57800842C7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -324,7 +324,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = calm.SpringAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = calm.SwiftSpring;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -335,25 +335,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2881E73D22EAAD1C00842C7A /* Build configuration list for PBXProject "SpringAnimation" */ = {
+		2881E75C22EAB57800842C7A /* Build configuration list for PBXProject "SwiftSpring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2881E74922EAAD1C00842C7A /* Debug */,
-				2881E74A22EAAD1C00842C7A /* Release */,
+				2881E76822EAB57800842C7A /* Debug */,
+				2881E76922EAB57800842C7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2881E74B22EAAD1C00842C7A /* Build configuration list for PBXNativeTarget "SpringAnimation" */ = {
+		2881E76A22EAB57800842C7A /* Build configuration list for PBXNativeTarget "SwiftSpring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2881E74C22EAAD1C00842C7A /* Debug */,
-				2881E74D22EAAD1C00842C7A /* Release */,
+				2881E76B22EAB57800842C7A /* Debug */,
+				2881E76C22EAB57800842C7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2881E73A22EAAD1C00842C7A /* Project object */;
+	rootObject = 2881E75922EAB57800842C7A /* Project object */;
 }

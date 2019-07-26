@@ -19,7 +19,7 @@
 **CocoaPods - Podfile**
 
 ```ruby
-pod 'SpringAnimation'
+pod 'SwiftSpring'
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ pod 'SpringAnimation'
 First make sure to import the framework:
 
 ```swift
-import SpringAnimation
+import SwiftSpring
 ```
 
 Here are some usage examples. All devices are also available as simulators:
