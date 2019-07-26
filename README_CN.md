@@ -83,6 +83,15 @@ linear
 easeIn
 easeOut
 easeInOut
+discrete
+easeInSine, easeOutSine, easeInOutSine
+easeInQuad, easeOutQuad, easeInOutQuad
+easeInCubic, easeOutCubic, easeInOutCubic
+easeInQuart, easeOutQuart, easeInOutQuart
+easeInQuint, easeOutQuint, easeInOutQuint
+easeInExpo, easeOutExpo, easeInOutExpo
+easeInCirc, easeOutCirc, easeInOutCirc
+easeInBack, easeOutBack, easeInOutBack
 ```
 
 ### 特性
