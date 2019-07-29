@@ -2,6 +2,10 @@
 # Spring - Animation
 
 ![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)
+![Platform](https://img.shields.io/badge/platforms-iOS-orange.svg)
+[![Version](https://img.shields.io/cocoapods/v/SwiftSpring.svg)](http://cocoapods.org/pods/SwiftSpring)
+![Xcode 10.0+](https://img.shields.io/badge/Xcode-8.2%2B-blue.svg)
+![iOS 8.0+](https://img.shields.io/badge/iOS-8.0%2B-blue.svg)
 
 ## [天朝子民](README_CN.md)
 
