@@ -62,8 +62,17 @@ class CodeViewController: UIViewController {
         if data.damping != 0.7 {
             codeText += getString("damping", value: data.damping)
         }
+        
         if data.velocity != 0.7 {
             codeText += getString("velocity", value: data.velocity)
+        }
+        
+        if data.repeatCount != 1 {
+            codeText += getString("repeatCount", value: CGFloat(data.repeatCount))
+        }
+        
+        if data.opacity != 1 {
+            codeText += getString("alpha", value: data.opacity)
         }
         
         if data.x != 0 || data.y != 0 {
@@ -76,6 +85,10 @@ class CodeViewController: UIViewController {
             let x = String(format: "%.1f", Double(data.scaleX))
             let y = String(format: "%.1f", Double(data.scaleY))
             codeText += "\t.scale(\(x),\(y))\n"
+        }
+        
+        if data.animateFrom != false  {
+            codeText += "\t.animateFrom(\(data.animateFrom))\n"
         }
         
         codeText += "\t.animate()"
