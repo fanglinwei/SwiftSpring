@@ -83,12 +83,6 @@ class CodeViewController: UIViewController {
         codeTextView.text = codeText
     }
     
-    private func getString(_ name: String, value: CGFloat) -> String {
-        let value = String(format: "%.1f", Double(value))
-        return "\t.\(name)(\(value))\n"
-    }
-    
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
@@ -99,5 +93,13 @@ class CodeViewController: UIViewController {
         
         UIApplication.shared.sendAction(#selector(SpringViewController.minimizeView(_:)), to: nil, from: self, for: nil)
     }
+}
 
+extension CodeViewController {
+    
+    private func getString(_ name: String, value: CGFloat) -> String {
+        let value = String(format: "%.1f", Double(value))
+        return "\t.\(name)(\(value))\n"
+    }
+    
 }
