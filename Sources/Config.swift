@@ -25,4 +25,6 @@ public class Config {
     public var rotate: CGFloat = 0
     public var opacity: CGFloat = 1
     public var animateFrom: Bool = true
+    
+    public init() {}
 }
