@@ -29,9 +29,20 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldQ-ed-7Bd">
                                         <rect key="frame" x="157" y="268" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lemon" translatesAutoresizingMaskIntoConstraints="NO" id="ZYz-JW-0CG">
+                                                <rect key="frame" x="22.5" y="22.5" width="55" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ZYz-JW-0CG" secondAttribute="height" id="KJu-Pk-UBx"/>
+                                                    <constraint firstAttribute="width" constant="55" id="p3o-Di-jmf"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.1529411765" green="0.61176470589999998" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="ZYz-JW-0CG" firstAttribute="centerY" secondItem="ldQ-ed-7Bd" secondAttribute="centerY" id="0wT-lV-1yg"/>
                                             <constraint firstAttribute="height" constant="100" id="IUL-k2-rVG"/>
+                                            <constraint firstItem="ZYz-JW-0CG" firstAttribute="centerX" secondItem="ldQ-ed-7Bd" secondAttribute="centerX" id="Zsw-Xh-QxT"/>
                                             <constraint firstAttribute="width" constant="100" id="p99-9c-qDa"/>
                                         </constraints>
                                     </view>
@@ -513,5 +524,6 @@
     </scenes>
     <resources>
         <image name="icon-shape" width="30" height="13"/>
+        <image name="lemon" width="34" height="34"/>
     </resources>
 </document>
