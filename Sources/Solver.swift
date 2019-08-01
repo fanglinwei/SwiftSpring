@@ -166,19 +166,6 @@ extension Solver {
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
             layer.add(animation, forKey: "pop")
             
-        case .active:
-            let animation = CABasicAnimation(keyPath: "transform.scale")
-            animation.fromValue = -0.023*force
-            animation.toValue = 0.023*force
-            animation.timingFunction = curve.timingFunction
-            animation.duration = CFTimeInterval(duration)
-            animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
-            animation.autoreverses = true
-            animation.fillMode = .forwards
-            animation.isAdditive = true
-            animation.repeatCount = repeatCount
-            layer.add(animation, forKey: "active")
-            
         case .flipX:
             config.rotate = 0
             config.scaleX = 1

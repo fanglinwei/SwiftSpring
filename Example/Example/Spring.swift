@@ -15,7 +15,6 @@ enum Spring {
         .fall,
         .shake,
         .pop,
-        .active,
         .morph,
         .squeeze,
         .flash,
@@ -91,7 +90,6 @@ extension Animation.Preset {
         case .fall:         return "fall"
         case .shake:        return "shake"
         case .pop:          return "pop"
-        case .active:       return "active"
         case .morph:        return "morph"
         case .squeeze:      return "squeeze"
         case .flash:        return "flash"

@@ -31,7 +31,6 @@ public extension Animation {
         case fall
         case shake
         case pop
-        case active
         case morph
         case squeeze
         case flash
