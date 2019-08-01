@@ -147,7 +147,7 @@ extension SpringViewController {
     }
     
     @IBAction func ballButtonPressed(_ sender: AnyObject) {
-        colorAnimations
+        colorAnimations()
         
         animateView()
     }
