@@ -67,6 +67,18 @@ extension SpringViewController {
         animation.duration = 0.2
         ballView.layer.cornerRadius = cornerRadius
         ballView.layer.add(animation, forKey: "radius")
+    
+        colorAnimations()
+    }
+    
+    private func colorAnimations() {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.ballView.backgroundColor = #colorLiteral(red: 0.4117647059, green: 0.8588235294, blue: 1, alpha: 1)
+        }) { finished in
+            UIView.animate(withDuration: 0.5) {
+                self.ballView.backgroundColor = #colorLiteral(red: 0.1529411765, green: 0.6117647059, blue: 0.9215686275, alpha: 1)
+            }
+        }
     }
     
     private func animateView() {
@@ -135,14 +147,7 @@ extension SpringViewController {
     }
     
     @IBAction func ballButtonPressed(_ sender: AnyObject) {
-        
-        UIView.animate(withDuration: 0.1, animations: {
-            self.ballView.backgroundColor = #colorLiteral(red: 0.4117647059, green: 0.8588235294, blue: 1, alpha: 1)
-        }) { finished in
-            UIView.animate(withDuration: 0.5) {
-                self.ballView.backgroundColor = #colorLiteral(red: 0.1529411765, green: 0.6117647059, blue: 0.9215686275, alpha: 1)
-            }
-        }
+        colorAnimations
         
         animateView()
     }
