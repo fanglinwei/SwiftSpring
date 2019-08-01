@@ -59,7 +59,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjd-2f-mGY">
                                         <rect key="frame" x="314" y="582" width="100" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="RwH-Xa-Utu"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="RwH-Xa-Utu"/>
                                             <constraint firstAttribute="height" constant="44" id="vqy-uu-pXd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
@@ -75,7 +75,7 @@
                                         <rect key="frame" x="0.0" y="582" width="100" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="6br-VY-fqV"/>
-                                            <constraint firstAttribute="width" constant="100" id="WRu-Qe-M2O"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="WRu-Qe-M2O"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                         <color key="tintColor" red="0.1529411765" green="0.61176470589999998" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -116,6 +116,8 @@
                                     <constraint firstItem="Ren-74-hDj" firstAttribute="leading" secondItem="AzQ-X7-Ut7" secondAttribute="leading" id="PD4-Ob-V55"/>
                                     <constraint firstAttribute="trailing" secondItem="Ren-74-hDj" secondAttribute="trailing" constant="15" id="Sg5-D4-UUH"/>
                                     <constraint firstItem="lTo-zC-R33" firstAttribute="top" secondItem="AzQ-X7-Ut7" secondAttribute="top" id="ceZ-24-ubl"/>
+                                    <constraint firstItem="6Pv-26-vmX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ren-74-hDj" secondAttribute="trailing" constant="8" symbolic="YES" id="j9b-OP-uSH"/>
+                                    <constraint firstItem="sjd-2f-mGY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Pv-26-vmX" secondAttribute="trailing" constant="8" symbolic="YES" id="pTB-gd-cN7"/>
                                     <constraint firstAttribute="bottom" secondItem="Ren-74-hDj" secondAttribute="bottom" constant="10" id="scW-00-Y4H"/>
                                     <constraint firstAttribute="bottom" secondItem="6Pv-26-vmX" secondAttribute="bottom" constant="10" id="w9a-3d-dAA"/>
                                 </constraints>
@@ -443,7 +445,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmy-Zk-6E1">
                                         <rect key="frame" x="157" y="198" width="100" height="36"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="D8T-ZZ-EJx"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="D8T-ZZ-EJx"/>
                                             <constraint firstAttribute="height" constant="36" id="MPm-3S-OGX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
