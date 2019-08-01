@@ -33,7 +33,7 @@ class CodeViewController: UIViewController {
             .animateFrom(false)
             .animation(.squeezeRight)
             .animate {
-                self.dismiss(animated: false, completion: nil)
+                self.dismiss(animated: false)
         }
     }
     

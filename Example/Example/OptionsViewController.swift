@@ -41,13 +41,6 @@ class OptionsViewController: UIViewController {
     
     
     weak var delegate: OptionsViewControllerDelegate?
-    
-    var selectedDamping: CGFloat = 0.7
-    var selectedVelocity: CGFloat = 0.7
-    var selectedScale: CGFloat = 1
-    var selectedX: CGFloat = 0
-    var selectedY: CGFloat = 0
-    var selectedRotate: CGFloat = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,7 +83,7 @@ class OptionsViewController: UIViewController {
         super.touchesEnded(touches, with: event)
         guard touches.first?.view == view else { return }
         
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
         UIApplication.shared.sendAction(#selector(SpringViewController.maximizeView(_:)), to: nil, from: self, for: nil)
     }
 }
@@ -135,7 +128,7 @@ extension OptionsViewController {
     
     @IBAction func resetButtonPressed(_ sender: Any) {
         delegate?.resetButtonPressed()
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
         
         UIApplication.shared.sendAction(#selector(SpringViewController.maximizeView(_:)), to: nil, from: self, for: nil)
     }
