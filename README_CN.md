@@ -49,6 +49,8 @@ import SwiftSpring
 
 下面是一些简单示例. 支持所有设备和模拟器:
 
+## API
+
 ### 链式调用
 
 ```swift
