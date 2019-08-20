@@ -7,7 +7,7 @@
 ![Xcode 10.0+](https://img.shields.io/badge/Xcode-10.0%2B-blue.svg)
 ![iOS 8.0+](https://img.shields.io/badge/iOS-8.0%2B-blue.svg)
 
-## Table of Contents
+## 目录
 
 - [特性](#特性)
 - [安装](#安装)
