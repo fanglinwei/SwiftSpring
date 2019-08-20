@@ -63,11 +63,11 @@ animationView.spring
 ```
 
 ### 方法
-```
+```swift
 animate() { ... }
 ```
 ### 动画类型
-```
+```swift
 shake
 pop
 morph
@@ -97,7 +97,7 @@ flash
 ```
 
 ### 曲线
-```
+```swift
 spring
 linear
 easeIn
@@ -115,7 +115,7 @@ easeInBack, easeOutBack, easeInOutBack
 ```
 
 ### 属性
-```
+```swift
 force
 duration
 delay
