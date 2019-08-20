@@ -15,7 +15,7 @@
 - [Install](#install)
 - [Usage](#usage)
 - [API](#api)
-  - [Chaining](#chainingi)
+  - [Chaining](#chaining)
   - [Functions](#functions)
   - [Animations](#animations)
   - [Curve](#curve)
