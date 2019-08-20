@@ -9,6 +9,21 @@
 
 ## [天朝子民](README_CN.md)
 
+## Table of Contents
+
+- [Features](#features)
+- [Install](#install)
+- [Usage](#usage)
+- [API](#api)
+  - [Chaining](#chainingi)
+  - [Functions](#functions)
+  - [Animations](#animations)
+  - [Curve](#curve)
+  - [Properties](#properties)
+- [Reference](#reference)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Features
 
 - [x] Chained grammar.
@@ -18,7 +33,7 @@
 - [x] No code intrusion.
 
 
-## Installation
+## Install
 
 **CocoaPods - Podfile**
 
@@ -36,6 +51,8 @@ import SwiftSpring
 
 Here are some usage examples. All devices are also available as simulators:
 
+## API
+
 ### Chaining
 
 ```swift
@@ -48,12 +65,14 @@ Here are some usage examples. All devices are also available as simulators:
 ```
 
 ### Functions
-```
+
+```swift
 animate() { ... }
 ```
 
-### Animation
-```
+### Animations
+
+```swift
 shake
 pop
 morph
@@ -82,7 +101,7 @@ zoomOut
 flash
 ```
 ### Curve
-```
+```swift
 spring
 linear
 easeIn
@@ -101,7 +120,7 @@ easeInBack, easeOutBack, easeInOutBack
 ```
 
 ### Properties
-```
+```swift
 force
 duration
 delay
@@ -112,6 +131,7 @@ scale
 x
 y
 rotate
+alpha
 ```
 
 \* Not all properties work together.

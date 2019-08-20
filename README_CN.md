@@ -7,6 +7,21 @@
 ![Xcode 10.0+](https://img.shields.io/badge/Xcode-10.0%2B-blue.svg)
 ![iOS 8.0+](https://img.shields.io/badge/iOS-8.0%2B-blue.svg)
 
+## Table of Contents
+
+- [特性](#特性)
+- [安装](#安装)
+- [使用](#使用)
+- [API](#api)
+  - [链式](#链式)
+  - [方法](#方法)
+  - [动画类型](#动画类型)
+  - [曲线](#曲线)
+  - [属性](#属性)
+- [参考](#参考)
+- [贡献](#贡献)
+- [协议](#协议)
+
 ## 特性
 
 - [x] 链式语法.
@@ -97,7 +112,7 @@ easeInCirc, easeOutCirc, easeInOutCirc
 easeInBack, easeOutBack, easeInOutBack
 ```
 
-### 特性
+### 属性
 ```
 force
 duration
@@ -109,6 +124,7 @@ scale
 x
 y
 rotate
+alpha
 ```
 
 \* 并非所有属性都能一起使用.
