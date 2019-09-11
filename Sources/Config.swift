@@ -14,7 +14,7 @@ public class Config {
     public var curve: Animation.Curve = .none
     public var force: CGFloat = 1
     public var delay: CGFloat = 0
-    public var duration: CGFloat = 0.7
+    public var duration: TimeInterval = 0.7
     public var damping: CGFloat = 0.7
     public var velocity: CGFloat = 0.7
     public var repeatCount: Float = 1

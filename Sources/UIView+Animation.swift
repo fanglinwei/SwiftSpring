@@ -23,7 +23,7 @@ public extension Wrapper where Base: UIView {
         return self
     }
     @discardableResult
-    func duration(_ duration: CGFloat) -> Wrapper {
+    func duration(_ duration: TimeInterval) -> Wrapper {
         config.duration = duration
         return self
     }

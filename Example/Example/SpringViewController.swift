@@ -135,7 +135,7 @@ extension SpringViewController {
     }
     
     @IBAction func durationSliderChanged(_ sender: UISlider) {
-        ballConfig.duration = CGFloat(sender.value)
+        ballConfig.duration = TimeInterval(sender.value)
         animateView()
         durationLabel.text = String(format: "Duration: %.1f", Double(ballConfig.duration))
     }

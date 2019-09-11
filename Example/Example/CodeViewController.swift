@@ -50,7 +50,7 @@ class CodeViewController: UIViewController {
             codeText += getString("force", value: data.force)
         }
         if data.duration != 0.7 {
-            codeText += getString("duration", value: data.duration)
+            codeText += getString("duration", value: CGFloat(data.duration))
         }
         if data.delay != 0 {
             codeText += getString("delay", value: data.delay)

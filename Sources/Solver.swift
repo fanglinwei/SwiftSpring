@@ -34,7 +34,7 @@ extension Solver {
     private var animation: Animation.Preset { return config.animation}
     private var force: CGFloat { return config.force }
     private var delay: CGFloat { return config.delay }
-    private var duration: CGFloat { return config.duration }
+    private var duration: TimeInterval { return config.duration }
     private var damping: CGFloat { return config.damping }
     private var velocity: CGFloat { return config.velocity }
     private var repeatCount: Float { return config.repeatCount }
@@ -105,7 +105,7 @@ extension Solver {
             animation.fromValue = 1
             animation.toValue = 0
             animation.timingFunction = curve.timingFunction
-            animation.duration = CFTimeInterval(duration)
+            animation.duration = duration
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
             animation.autoreverses = true
             layer.add(animation, forKey: "fade")
@@ -148,7 +148,7 @@ extension Solver {
             animation.values = [0, 30 * force, -30 * force, 30 * force, 0]
             animation.keyTimes = [0, 0.2, 0.4, 0.6, 0.8, 1]
             animation.timingFunction = curve.timingFunction
-            animation.duration = CFTimeInterval(duration)
+            animation.duration = duration
             animation.isAdditive = true
             animation.repeatCount = repeatCount
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
@@ -160,7 +160,7 @@ extension Solver {
             animation.values = [0, 0.2*force, -0.2*force, 0.2*force, 0]
             animation.keyTimes = [0, 0.2, 0.4, 0.6, 0.8, 1]
             animation.timingFunction = curve.timingFunction
-            animation.duration = CFTimeInterval(duration)
+            animation.duration = duration
             animation.isAdditive = true
             animation.repeatCount = repeatCount
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
@@ -178,7 +178,7 @@ extension Solver {
             animation.fromValue = NSValue(caTransform3D: CATransform3DMakeRotation(0, 0, 0, 0))
             animation.toValue = NSValue(caTransform3D:
                 CATransform3DConcat(perspective, CATransform3DMakeRotation(.pi, 0, 1, 0)))
-            animation.duration = CFTimeInterval(duration)
+            animation.duration = duration
             animation.repeatCount = repeatCount
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
             animation.timingFunction = curve.timingFunction
@@ -194,7 +194,7 @@ extension Solver {
                 CATransform3DMakeRotation(0, 0, 0, 0))
             animation.toValue = NSValue(caTransform3D:
                 CATransform3DConcat(perspective, CATransform3DMakeRotation(.pi, 1, 0, 0)))
-            animation.duration = CFTimeInterval(duration)
+            animation.duration = duration
             animation.repeatCount = repeatCount
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
             animation.timingFunction = curve.timingFunction
@@ -206,7 +206,7 @@ extension Solver {
             morphX.values = [1, 1.3 * force, 0.7, 1.3 * force, 1]
             morphX.keyTimes = [0, 0.2, 0.4, 0.6, 0.8, 1]
             morphX.timingFunction = curve.timingFunction
-            morphX.duration = CFTimeInterval(duration)
+            morphX.duration = duration
             morphX.repeatCount = repeatCount
             morphX.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
             layer.add(morphX, forKey: "morphX")
@@ -216,7 +216,7 @@ extension Solver {
             morphY.values = [1, 0.7, 1.3 * force, 0.7, 1]
             morphY.keyTimes = [0, 0.2, 0.4, 0.6, 0.8, 1]
             morphY.timingFunction = curve.timingFunction
-            morphY.duration = CFTimeInterval(duration)
+            morphY.duration = duration
             morphY.repeatCount = repeatCount
             morphY.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
             layer.add(morphY, forKey: "morphY")
@@ -227,7 +227,7 @@ extension Solver {
             morphX.values = [1, 1.5 * force, 0.5, 1.5 * force, 1]
             morphX.keyTimes = [0, 0.2, 0.4, 0.6, 0.8, 1]
             morphX.timingFunction = curve.timingFunction
-            morphX.duration = CFTimeInterval(duration)
+            morphX.duration = duration
             morphX.repeatCount = repeatCount
             morphX.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
             layer.add(morphX, forKey: "morphX")
@@ -237,7 +237,7 @@ extension Solver {
             morphY.values = [1, 0.5, 1, 0.5, 1]
             morphY.keyTimes = [0, 0.2, 0.4, 0.6, 0.8, 1]
             morphY.timingFunction = curve.timingFunction
-            morphY.duration = CFTimeInterval(duration)
+            morphY.duration = duration
             morphY.repeatCount = repeatCount
             morphY.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
             layer.add(morphY, forKey: "morphY")
@@ -247,7 +247,7 @@ extension Solver {
             animation.keyPath = "opacity"
             animation.fromValue = 1
             animation.toValue = 0
-            animation.duration = CFTimeInterval(duration)
+            animation.duration = duration
             animation.repeatCount = repeatCount * 2.0
             animation.autoreverses = true
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
@@ -258,7 +258,7 @@ extension Solver {
             animation.keyPath = "transform.rotation"
             animation.values = [0, 0.3 * force, -0.3 * force, 0.3 * force, 0]
             animation.keyTimes = [0, 0.2, 0.4, 0.6, 0.8, 1]
-            animation.duration = CFTimeInterval(duration)
+            animation.duration = duration
             animation.isAdditive = true
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
             layer.add(animation, forKey: "wobble")
@@ -268,7 +268,7 @@ extension Solver {
             x.values = [0, 30 * force, -30 * force, 30 * force, 0]
             x.keyTimes = [0, 0.2, 0.4, 0.6, 0.8, 1]
             x.timingFunction = curve.timingFunction
-            x.duration = CFTimeInterval(duration)
+            x.duration = duration
             x.isAdditive = true
             x.repeatCount = repeatCount
             x.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
@@ -279,7 +279,7 @@ extension Solver {
             animation.keyPath = "transform.rotation"
             animation.values = [0, 0.3 * force, -0.3 * force, 0.3 * force, 0]
             animation.keyTimes = [0, 0.2, 0.4, 0.6, 0.8, 1]
-            animation.duration = CFTimeInterval(duration)
+            animation.duration = duration
             animation.isAdditive = true
             animation.repeatCount = repeatCount
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
@@ -319,7 +319,7 @@ extension Solver {
         }
         
         UIView.animate(
-            withDuration: TimeInterval(duration),
+            withDuration: duration,
             delay: TimeInterval(delay),
             usingSpringWithDamping: damping,
             initialSpringVelocity: velocity,
