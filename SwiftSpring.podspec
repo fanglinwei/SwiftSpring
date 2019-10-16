@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "SwiftSpring"
-s.version      = "0.0.7"
+s.version      = "0.0.8"
 s.summary      = "An elegant animation written in swift"
 
 s.homepage     = "https://github.com/fanglinwei/SwiftSpring-Package"
