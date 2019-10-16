@@ -4,7 +4,7 @@ s.name         = "SwiftSpring"
 s.version      = "0.0.7"
 s.summary      = "An elegant animation written in swift"
 
-s.homepage     = "https://github.com/fanglinwei/SwiftSpring"
+s.homepage     = "https://github.com/fanglinwei/SwiftSpring-Package"
 
 s.license      = { :type => "MIT", :file => "LICENSE" }
 
@@ -12,9 +12,9 @@ s.author       = { "calm" => "calm1993@163.com" }
 
 s.platform     = :ios, "10.0"
 
-s.source       = { :git => "https://github.com/fanglinwei/SwiftSpring.git", :tag => s.version }
+s.source       = { :git => "https://github.com/fanglinwei/SwiftSpring-Package.git", :tag => s.version }
 
-s.source_files  = "SwiftSpring/Sources/**/*.swift"
+s.source_files  = "Sources/**/*.swift"
 
 s.requires_arc = true
 
