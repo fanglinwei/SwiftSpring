@@ -1,0 +1,3 @@
+[submodule "SwiftSpring"]
+	path = SwiftSpring
+	url = git@github.com:fanglinwei/SwiftSpring-Package.git

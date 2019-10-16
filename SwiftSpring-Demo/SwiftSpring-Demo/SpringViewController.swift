@@ -29,7 +29,6 @@ class SpringViewController: UIViewController {
         super.viewDidLoad()
         animationPicker.delegate = self
         animationPicker.dataSource = self
-        animationPicker.showsSelectionIndicator = true
         
         ballView.layer.cornerRadius = 10
         ballConfig.animation = animations[0]

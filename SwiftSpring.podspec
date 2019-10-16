@@ -14,7 +14,7 @@ s.platform     = :ios, "10.0"
 
 s.source       = { :git => "https://github.com/fanglinwei/SwiftSpring.git", :tag => s.version }
 
-s.source_files  = "Sources/**/*.swift"
+s.source_files  = "SwiftSpring/Sources/**/*.swift"
 
 s.requires_arc = true
 
