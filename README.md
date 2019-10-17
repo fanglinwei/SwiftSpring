@@ -41,6 +41,22 @@
 pod 'SwiftSpring'
 ```
 
+###Swift Package Manager
+
+You can use The  [Swift Package Manager](https://swift.org/package-manager) to install SwiftSpring by adding the proper description to your Package.swift file:
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "YOUR_PROJECT_NAME",
+    targets: [],
+    dependencies: [
+        .package(url: "https://github.com/fanglinwei/SwiftSpring-Package.git", from: "0.0.8")
+    ]
+)
+```
+
 ## Usage
 
 First make sure to import the framework:

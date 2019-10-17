@@ -39,6 +39,22 @@
 pod 'SwiftSpring'
 ```
 
+###Swift Package Manager
+
+您可以使用通过[Swift Package Manager](https://swift.org/package-manager)在Package.swift文件中添加正确的描述来安装SwiftSpring
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "YOUR_PROJECT_NAME",
+    targets: [],
+    dependencies: [
+        .package(url: "https://github.com/fanglinwei/SwiftSpring-Package.git", from: "0.0.8")
+    ]
+)
+```
+
 ## 使用
 
 首先导入:
