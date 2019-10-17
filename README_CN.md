@@ -39,9 +39,9 @@
 pod 'SwiftSpring'
 ```
 
-###Swift Package Manager
+**Swift Package Manager**
 
-您可以使用通过[Swift Package Manager](https://swift.org/package-manager)在Package.swift文件中添加正确的描述来安装SwiftSpring
+您可以使用通过[Swift Package Manager](https://swift.org/package-manager)在`Package.swift`文件中添加正确的描述来安装`SwiftSpring`:
 
 ```swift
 import PackageDescription

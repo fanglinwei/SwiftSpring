@@ -41,7 +41,7 @@
 pod 'SwiftSpring'
 ```
 
-###Swift Package Manager
+**Swift Package Manager**
 
 You can use The  [Swift Package Manager](https://swift.org/package-manager) to install SwiftSpring by adding the proper description to your Package.swift file:
 
