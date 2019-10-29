@@ -10,6 +10,7 @@
 ## 目录
 
 - [特性](#特性)
+- [下载](#下载)
 - [安装](#安装)
 - [使用](#使用)
 - [API](#api)
@@ -29,6 +30,20 @@
 - [x] 轻量级扩展.
 - [x] 基于UIViewAnimation.
 - [x] 无代码入侵.
+
+## 下载
+
+这是一个demo工程并不包含依赖的子模块`SwiftSpring`, 您需要使用终端或git客户端，例如Source Tree。
+
+**终端**
+
+```sh
+ git clone --recurse-submodules https://github.com/fanglinwei/SwiftSpring.git
+```
+
+#### **Source Tree**
+
+从https://github.com/fanglinwei/SwiftSpring.git进行克隆还会将`SwiftSpring`设置为子模块。
 
 
 ## 安装

@@ -32,6 +32,20 @@
 - [x] Based on UIViewAnimation.
 - [x] No code intrusion.
 
+## Download
+
+This is a demo project that does not include the dependency submodule `SwiftSpring`, you need to use a terminal or git client, such as Source Tree.
+
+**Terminal Users**
+
+```sh
+ git clone --recurse-submodules https://github.com/fanglinwei/SwiftSpring.git
+```
+
+#### **Source Tree**
+
+Cloning from https://github.com/fanglinwei/SwiftSpring.git also setups `SwiftSpring` as submodule.
+
 
 ## Install
 
