@@ -122,7 +122,6 @@ extension SpringViewController {
     }
 }
 
-
 // MARK: - Action
 extension SpringViewController {
     
@@ -140,7 +139,7 @@ extension SpringViewController {
     }
     
     @IBAction func delaySliderChanged(_ sender: UISlider) {
-        ballConfig.delay = CGFloat(sender.value)
+        ballConfig.delay = TimeInterval(sender.value)
         animateView()
         delayLabel.text = String(format: "Delay: %.1f", Double(ballConfig.delay))
     }

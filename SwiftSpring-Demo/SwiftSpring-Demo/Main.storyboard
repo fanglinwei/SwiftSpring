@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6jS-Kw-7MB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6jS-Kw-7MB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
         <!--Spring View Controller-->
         <scene sceneID="rQx-dC-JYn">
             <objects>
-                <viewController id="6jS-Kw-7MB" customClass="SpringViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6jS-Kw-7MB" customClass="SpringViewController" customModule="SwiftSpring_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kFI-gA-dRc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfy-CJ-662">
                                         <rect key="frame" x="157" y="268" width="100" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lemon" translatesAutoresizingMaskIntoConstraints="NO" id="2AN-Vc-6bz">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2AN-Vc-6bz">
                                                 <rect key="frame" x="22.5" y="22.5" width="55" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="55" id="g9F-TI-ZoQ"/>
@@ -234,8 +234,8 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Oi5-hm-05D"/>
-                                <exclude reference="dFK-gz-bpx"/>
                                 <exclude reference="csO-OU-pTw"/>
+                                <exclude reference="dFK-gz-bpx"/>
                             </mask>
                         </variation>
                     </view>
@@ -257,7 +257,7 @@
         <!--Code View Controller-->
         <scene sceneID="pop-Of-rfM">
             <objects>
-                <viewController id="XBQ-WJ-BMY" customClass="CodeViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XBQ-WJ-BMY" customClass="CodeViewController" customModule="SwiftSpring_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hhe-kA-3qv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,10 +295,6 @@
                                     <constraint firstAttribute="centerX" secondItem="dy3-fe-CW7" secondAttribute="centerX" id="iJy-H3-4Jm"/>
                                     <constraint firstItem="k5H-sb-MFS" firstAttribute="top" secondItem="dy3-fe-CW7" secondAttribute="bottom" constant="8.5" id="qvK-PI-PJm"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeRight"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animateFrom" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -323,7 +319,7 @@
         <!--Options View Controller-->
         <scene sceneID="hy5-fJ-dZT">
             <objects>
-                <viewController id="5m4-Pu-AGs" customClass="OptionsViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5m4-Pu-AGs" customClass="OptionsViewController" customModule="SwiftSpring_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hv2-ds-HWC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -485,10 +481,6 @@
                                     <constraint firstAttribute="trailing" secondItem="wAn-10-xHI" secondAttribute="trailing" constant="15" id="xkx-x0-a60"/>
                                     <constraint firstAttribute="centerX" secondItem="ceY-df-03o" secondAttribute="centerX" id="yDp-dx-SKc"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animateFrom" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -523,6 +515,5 @@
     </scenes>
     <resources>
         <image name="icon-shape" width="30" height="13"/>
-        <image name="lemon" width="34" height="34"/>
     </resources>
 </document>

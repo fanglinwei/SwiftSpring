@@ -53,7 +53,7 @@ class CodeViewController: UIViewController {
             codeText += getString("duration", value: CGFloat(data.duration))
         }
         if data.delay != 0 {
-            codeText += getString("delay", value: data.delay)
+            codeText += getString("delay", value: CGFloat(data.delay))
         }
         
         if data.rotate != 0 {
