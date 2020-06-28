@@ -26,11 +26,12 @@
 
 ## Features
 
-- [x] Chained grammar.
-- [x] No inheritance required.
-- [x] Lightweight expansion.
-- [x] Based on UIViewAnimation.
-- [x] No code intrusion.
+- [x] Chained grammar
+- [x] No inheritance required
+- [x] Lightweight expansion
+- [x] Based on UIViewAnimation
+- [x] No code intrusion
+- [ ] SwiftUI支持
 
 ## Download
 
