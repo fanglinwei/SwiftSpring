@@ -31,7 +31,7 @@
 - [x] Lightweight expansion
 - [x] Based on UIViewAnimation
 - [x] No code intrusion
-- [ ] SwiftUI支持
+- [ ] SwiftUI support
 
 ## Download
 
