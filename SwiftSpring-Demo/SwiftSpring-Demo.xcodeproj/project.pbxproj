@@ -302,7 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B9D8DJR5J5;
+				DEVELOPMENT_TEAM = 47ED62RARV;
 				INFOPLIST_FILE = "SwiftSpring-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,7 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B9D8DJR5J5;
+				DEVELOPMENT_TEAM = 47ED62RARV;
 				INFOPLIST_FILE = "SwiftSpring-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
