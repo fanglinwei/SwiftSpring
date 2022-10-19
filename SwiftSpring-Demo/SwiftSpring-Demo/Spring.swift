@@ -14,7 +14,7 @@ enum Spring {
     static let animations: [Animation.Preset] = [
         .fall,
         .shake,
-        .jump,
+        .bounce,
         .pop,
         .morph,
         .squeeze,
@@ -90,7 +90,7 @@ extension Animation.Preset {
         case .none:         return "none"
         case .fall:         return "fall"
         case .shake:        return "shake"
-        case .jump:         return "jump"
+        case .bounce:         return "bounce"
         case .pop:          return "pop"
         case .morph:        return "morph"
         case .squeeze:      return "squeeze"
