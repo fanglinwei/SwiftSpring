@@ -7,4 +7,7 @@
    <FileRef
       location = "group:SwiftSpring-Demo/SwiftSpring-Demo.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:SwiftSpring-SwiftUI-Demo/SwiftSpring-SwiftUI-Demo.xcodeproj">
+   </FileRef>
 </Workspace>

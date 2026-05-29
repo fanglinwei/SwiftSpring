@@ -30,7 +30,7 @@
 - [x] 轻量级扩展
 - [x] 基于UIViewAnimation
 - [x] 无代码入侵
-- [ ] SwiftUI支持
+- [x] SwiftUI支持
 
 ## 下载
 
@@ -83,7 +83,7 @@ import SwiftSpring
 
 ## API
 
-### 链式调用
+### UIKit 链式调用
 
 ```swift
 animationView.spring
@@ -92,6 +92,21 @@ animationView.spring
 .duration(2)
 .curve(.easeOutQuad)
 .animate()
+```
+
+### SwiftUI
+
+SwiftUI 支持 iOS 13.0 及以上系统。
+
+```swift
+@State private var trigger = false
+
+Text("SwiftSpring")
+    .spring(
+        .pop,
+        trigger: trigger,
+        configuration: SpringConfiguration(duration: 0.7, force: 1)
+    )
 ```
 
 ### 方法
