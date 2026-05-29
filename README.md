@@ -105,6 +105,8 @@ animate() { ... }
 
 ```swift
 shake
+bounce
+jump
 pop
 morph
 squeeze

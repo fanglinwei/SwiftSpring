@@ -78,7 +78,7 @@ class CodeViewController: UIViewController {
         if data.x != 0 || data.y != 0 {
             let x = String(format: "%.1f", Double(data.x))
             let y = String(format: "%.1f", Double(data.y))
-            codeText += "\t.potint(\(x),\(y))\n"
+            codeText += "\t.point(\(x),\(y))\n"
         }
         
         if data.scaleX != 1 || data.scaleY != 1 {

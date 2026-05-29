@@ -101,6 +101,8 @@ animate() { ... }
 ### 动画类型
 ```swift
 shake
+bounce
+jump
 pop
 morph
 squeeze

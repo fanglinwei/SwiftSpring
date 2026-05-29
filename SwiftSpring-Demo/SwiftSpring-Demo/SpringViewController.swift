@@ -94,7 +94,7 @@ extension SpringViewController {
             .damping(config.damping)
             .velocity(config.velocity)
             .scale(config.scaleX, config.scaleY)
-            .potint(config.x, config.y)
+            .point(config.x, config.y)
             .rotate(config.rotate)
             .curve(config.curve)
             .animation(config.animation)
